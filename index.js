@@ -15,7 +15,10 @@ export default async ({ req, res, log, error }) => {
             databaseId,
             collectionId,
             'unique()',
-            { timestamp: new Date().toISOString() }
+            {
+                count: 1, // or any number
+                CreatedAt: new Date().toISOString()
+            }
         )
         const allDocs = await databases.listDocuments(databaseId, collectionId);
         const totalVisits = allDocs.total || 0;
