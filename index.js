@@ -2,11 +2,7 @@ import { Client, Databases } from 'node-appwrite'
 
 
 export default async ({ req, res, log, error }) => {
-    const allowedOrigins = ['http://localhost:5173/', 'https://mydomain.com']
-    const origin = req.headers['origin']
-    if (allowedOrigins.includes(origin)) {
-        res.headers.append('Access-Control-Allow-Origin', origin)
-    }
+    
     res.headers.append('Access-Control-Allow-Origin', '*')
     res.headers.append('Access-Control-Allow-Methods', 'GET,POST,OPTIONS')
     res.headers.append('Access-Control-Allow-Headers', 'Content-Type')
