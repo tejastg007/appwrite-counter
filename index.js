@@ -7,4 +7,5 @@ export default async ({ req, res, log, error }) => {
         .setProject(process.env.APPWRITE_PROJECT_ID)
         .setKey(process.env.APPWRITE_API_KEY)
     log('request')
+    return res.text('returned lol')
 }
