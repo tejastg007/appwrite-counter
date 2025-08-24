@@ -2,14 +2,8 @@ import { Client, Databases } from 'node-appwrite'
 
 
 export default async ({ req, res, log, error }) => {
-    
-    res.headers.append('Access-Control-Allow-Origin', '*')
-    res.headers.append('Access-Control-Allow-Methods', 'GET,POST,OPTIONS')
-    res.headers.append('Access-Control-Allow-Headers', 'Content-Type')
 
-    if (req.method === 'OPTIONS') {
-        return res.json({}, 200) // respond OK for preflight
-    } try {
+    try {
         const client = new Client()
             .setEndpoint(process.env.APPWRITE_API_ENDPOINT)
             .setProject(process.env.APPWRITE_PROJECT_ID)
