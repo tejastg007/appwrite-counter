@@ -1,0 +1,24 @@
+{
+  "name": "appwrite-counter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tejastg007/appwrite-counter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tejastg007/appwrite-counter/issues"
+  },
+  "homepage": "https://github.com/tejastg007/appwrite-counter#readme",
+  "dependencies": {
+    "env": "^0.0.2",
+    "node-appwrite": "^17.2.0"
+  }
+}
