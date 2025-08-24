@@ -2,6 +2,7 @@ import { Client, Databases } from 'node-appwrite'
 
 
 export default async ({ req, res, log, error }) => {
+    res.header.append('Access-Control-Allow-Origin', '*')
     try {
         const client = new Client()
             .setEndpoint(process.env.APPWRITE_API_ENDPOINT)
