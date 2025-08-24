@@ -16,7 +16,7 @@ export default async ({ req, res, log, error }) => {
             collectionId,
             'unique()',
             {
-                count: 1, // or any number
+                Count: 1, // or any number
                 CreatedAt: new Date().toISOString()
             }
         )
